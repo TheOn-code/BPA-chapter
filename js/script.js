@@ -4,6 +4,10 @@ function dq(val) {
     return document.querySelector(val)
 }
 
+function ce(val) {
+    return document.createElement(val)
+}
+
 let close_mobile_nav = dq(".close");
 let mobile_nav = dq(".mobile-popup")
 let menu = dq(".menu")
@@ -16,40 +20,56 @@ menu.addEventListener("click", () => {
     mobile_nav.style.display = "flex"
 })
 
-let time = 4000
-let carousel_image = dq("#carousel-image")
-let carousel = ["exec_board.jpeg", "random_group.JPG", "subway.jpg", "alex_dub.JPG", "group_on_stairs.JPG", "church.jpg", "weird_hand.jpg", "web_dub.JPG", "skyline.jpg", "steakhouse.jpg", "waffle.jpg"]
 let carousel_left = dq(".carousel-left")
 let carousel_right = dq(".carousel-right")
-let carousel_id = setTimeout(function rotate() {
-    carousel_image.style.opacity = "0";
-    setTimeout(() => {shift_carousel_forward()}, 500)
-    setTimeout(() => {carousel_image.style.opacity = "100"}, 500)
-    carousel_id = setTimeout(rotate, time)
-}, time)
+let carousel_img_container = dq(".carousel-img-container")
+let carousel_filenames = ["exec_board.png", "random_group.png", "subway.png", "alex_dub.png", "group_on_stairs.png", "church.png", "weird_hand.png", "web_dub.png", "skyline.png", "steakhouse.png", "waffle.png"]
+let carousel = []
+let time = 4000
 
+function begin_carousel() {
+    return setInterval(() => {
+        shift_carousel_forward()
+    }, time)
+}
+timerId = begin_carousel()
+
+carousel_filenames.forEach((val) => {
+    let img = ce("img")
+    img.classList.add("carousel-img")
+    img.src = `images/carousel/${val}`
+    img.style.opacity = "0"
+    carousel.push(img)
+})
+
+carousel.forEach((val) => {
+    carousel_img_container.append(val)
+})
+
+carousel[0].style.opacity = "100"
 
 function shift_carousel_forward() {
+    carousel[0].style.opacity = "0";
     carousel.push(carousel.shift())
-    carousel_image.setAttribute("src", `images/carousel/${carousel[0]}`)
+    carousel[0].style.opacity = "100"
 }
 
 function shift_carousel_backwards() {
+    carousel[0].style.opacity = "0";
     carousel.unshift(carousel.pop())
-    carousel_image.setAttribute("src", `images/carousel/${carousel[0]}`)
-    clearInterval(carousel_id)
-    let carousel_id = setInterval(shift_carousel_forward, time)
+    carousel[0].style.opacity = "100"
 }
 
 carousel_right.addEventListener("click", () => {
     shift_carousel_forward()
-    clearInterval(carousel_id)
-    carousel_id = setInterval(shift_carousel_forward, 5000)
+    clearInterval(timerId)
+    timerId = begin_carousel()
 })
 
 carousel_left.addEventListener("click", () => {
     shift_carousel_backwards()
-    clearInterval(carousel_id)
-    carousel_id = setInterval(shift_carousel_forward, 5000)
+    clearInterval(timerId)
+    timerId = begin_carousel()
 })
+
 
