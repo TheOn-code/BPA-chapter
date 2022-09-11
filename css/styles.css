@@ -283,6 +283,14 @@ nav li a:hover {
     margin-left: 13px;
     margin-right: 13px;
     padding: 13px;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 1200px) {
+    .carousel {
+        flex-direction: row;
+    }
 }
 
 .carousel-container {
@@ -338,6 +346,10 @@ nav li a:hover {
     box-shadow: 6px 6px 3px rgb(51, 49, 49);
 }
 
+.carousel-information {
+   
+    
+}
 .carousel p {
     width: var(--p-width);
     font-size: var(--p-size);
