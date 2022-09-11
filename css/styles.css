@@ -12,6 +12,7 @@
     --navy-blue: #1f59A3;
     --tan: #D6BA8A;
     --orange: #e76915;
+    --green: #334433;
     --background-color: #eaeaea;
     --p-width: 80%;
     --p-size: 18px;
@@ -89,10 +90,12 @@ h2 {
 
 nav {
     width: 100vw;
-    background-color: var(--tan);
+    background-color: var(--green);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 1;
 }
 
 .mobile {
@@ -280,14 +283,16 @@ header {
 
 .carousel {
     text-align: center;
-    margin: 20px 0 40px 0;
+    margin: 70px 0 40px 0;
     z-index: -1;
+    display: flex;
 }
 
 .carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
+    order: 1;
 }
 
 .carousel i {
@@ -301,7 +306,7 @@ header {
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
-    color: var(--red)
+    color: var(--green)
 }
 
 .dummy-carousel-img, .carousel-img {
@@ -333,7 +338,7 @@ header {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    box-shadow: 6px 6px 1.4px var(--red);
+    box-shadow: 6px 6px 3px rgb(51, 49, 49);
 }
 
 .carousel p {
@@ -485,7 +490,7 @@ header {
 
 footer {
     height: 40vh;
-    background-color: var(--tan);
+    background-color: var(--green);
     display: flex;
     justify-content: space-around;
     align-items: center;
