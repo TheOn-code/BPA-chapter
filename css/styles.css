@@ -236,26 +236,12 @@ nav li a:hover {
     nav {
         height: 120px;
     }
-    .top {
-        display: flex;
-        height: 60px;
-        justify-content: center;
-        align-items: center;
-    }
     .bottom {
         height: 60px;
-    }
-    .bottom .nav-logo {
-        display: none;
     }
     .nav-logo {
         width: 20vw;
         margin-top: 16px;
-    }
-    .bottom ul {
-        width: 100vw;
-        display: flex;
-        justify-content: center;
     }
     nav .bottom li {
         font-size: 24px;
