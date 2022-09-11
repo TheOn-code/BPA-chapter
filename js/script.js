@@ -72,4 +72,9 @@ carousel_left.addEventListener("click", () => {
     timerId = begin_carousel()
 })
 
+// $.each( $('*'), function() { 
+//     if( $(this).width() > $('body').width()) {
+//         console.log("Wide Element: ", $(this), "Width: ", $(this).width()); 
+//     } 
+// });
 

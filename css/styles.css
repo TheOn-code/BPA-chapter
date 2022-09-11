@@ -12,10 +12,46 @@
     --navy-blue: #1f59A3;
     --tan: #D6BA8A;
     --orange: #e76915;
+    --background-color: #eaeaea;
+    --p-width: 80%;
+    --p-size: 18px;
+    --p-height: 30px;
+}
+
+@media only screen and (min-width: 512px) {
+    :root {
+        --p-width: 70%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    :root {
+        --p-width: 64%;
+        --p-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    :root {
+        --p-width: 60%;
+        --p-size: 22px;
+        --p-height: 36px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    :root {
+        --p-size: 24px;
+        --p-height: 38px;
+    }
 }
 
 body {
-    background-color: #eaeaea;
+    background-color: var(--background-color);
+}
+
+html {
+    overflow-x: hidden;
 }
 
 h1 {
@@ -26,14 +62,48 @@ h2 {
     font-size: 16px;
 }
 
+/* Scroll */
+::-webkit-scrollbar {
+    width: 14px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--red);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #aa233e;
+}
+
+
 /* NAV */
 
 nav {
+    width: 100vw;
+    background-color: var(--tan);
     display: flex;
-    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile {
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--tan)
+    width: 100vw;
+}
+
+nav, .mobile {
+    height: 70px;
 }
 
 a {
@@ -46,8 +116,8 @@ p, li {
     line-height: 28px;
 }
 
-.mobile-nav {
-    margin: 0 10px;
+.full, .top {
+    display: none;
 }
 
 .menu {
@@ -109,6 +179,89 @@ nav li a:hover {
     -moz-text-decoration-color: var(--red);
 }
 
+@media only screen and (min-width: 512px) {
+    .nav-logo {
+        width: 40vw;
+    }
+    nav, .mobile {
+        height: 80px;
+    }
+    .menu {
+        font-size: 64px;
+        margin-right: 10px
+    }
+    .close {
+        font-size: 50px;
+        margin: 6px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+    .full {
+        display: block;
+        width: 100vw;
+    }
+    nav, .bottom {
+        height: 90px;
+    }
+    nav .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav .bottom ul {
+        display: flex;
+        margin-right: 20px;
+    }
+    nav .bottom li {
+        margin: 0 8px;
+        font-size: 21.7px;
+    }
+    .nav-logo {
+        width: 32vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    nav {
+        height: 120px;
+    }
+    .top {
+        display: flex;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+    }
+    .bottom {
+        height: 60px;
+    }
+    .bottom .nav-logo {
+        display: none;
+    }
+    .nav-logo {
+        width: 20vw;
+        margin-top: 16px;
+    }
+    .bottom ul {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    nav .bottom li {
+        font-size: 24px;
+        margin: 0 18px;
+    }  
+}
+
+@media only screen and (min-width: 1200px) {
+    .nav-logo {
+        width: 15vw;
+    }
+}
+
 
 /* Header */
 
@@ -117,6 +270,11 @@ header {
     padding-top: 20px;
 }
 
+@media only screen and (min-width: 992px) {
+    header h1 {
+        font-size: 42px;
+    }
+}
 
 /* Carousel */
 
@@ -135,6 +293,15 @@ header {
 .carousel i {
     margin: 0 6px;
     cursor: pointer;
+}
+
+.carousel i:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    color: var(--red)
 }
 
 .dummy-carousel-img, .carousel-img {
@@ -170,7 +337,65 @@ header {
 }
 
 .carousel p {
-    width: 80%;
+    width: var(--p-width);
+    font-size: var(--p-size);
+    line-height: var(--p-height);
+    margin: 20px auto;
+}
+
+@media only screen and (min-width: 512px) {
+    .carousel i {
+        font-size: 30px;
+    }
+    .dummy-carousel-img, .carousel-img {
+        width: 75vw;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .carousel i {
+        font-size: 40px;
+    }
+    .dummy-carousel-img, .carousel-img {
+        width: 70vw;
+    }
+    .carousel p {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .carousel i {
+        font-size: 42px;
+    }
+    .dummy-carousel-img, .carousel-img {
+        width: 64vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .carousel i {
+        font-size: 48px;
+    }
+    .dummy-carousel-img, .carousel-img {
+        width: 54vw;
+    }
+}
+
+/* What is BPA */
+
+.what {
+    text-align: center;
+}
+
+.what h2 {
+    font-size: 36px;
+}
+
+.what p {
+    width: var(--p-width);
+    font-size: var(--p-size);
+    line-height: var(--p-height);
     margin: 20px auto;
 }
 
@@ -193,8 +418,35 @@ header {
 
 .announcements li {
     margin: 10px 0;
-    font-size: 26;
+    font-size: 20px;
 }
+
+@media only screen and (min-width: 512px) {
+    .announcements ul {
+        margin-left: 0px;
+        margin-top: 18px;
+    }
+    .announcements {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .announcements li {
+        margin: 12px 0;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .announcements h2 {
+        font-size: 42px;
+    }
+    .announcements li {
+        margin: 16px 0;
+        font-size: 24px;
+    }
+}
+
 
 /* Advisors  */
 
@@ -216,6 +468,16 @@ header {
 
 .link-container a:hover {
     text-decoration: underline;
+}
+
+@media only screen and (min-width: 512px) {
+    .link-container a {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 512px) {
+
 }
 
 
