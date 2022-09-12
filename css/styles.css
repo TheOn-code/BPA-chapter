@@ -19,50 +19,30 @@
     --p-width: 80%;
     --p-size: 18px;
     --p-height: 30px;
-}
-
-@media only screen and (min-width: 512px) {
-    :root {
-        --p-width: 70%;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    :root {
-        --p-width: 64%;
-        --p-size: 20px;
-    }
-}
-
-@media only screen and (min-width: 992px) {
-    :root {
-        --p-width: 60%;
-        --p-size: 22px;
-        --p-height: 36px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    :root {
-        --p-size: 24px;
-        --p-height: 38px;
-    }
+    --light-black: rgb(39, 39, 39);
+    --maroon: #950d2f;
 }
 
 body {
-    background-color: var(--background-color);
+    background-color: var(--light-black);
 }
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-h1 {
-    font-size: 32px;
-}
-
-h2 {
-    font-size: 16px;
+hr {
+    width: 80vw;
+    height: 10px;
+    border-radius: 1000px;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    background-color: var(--green);
+    border: var(--green);
+    margin: 20px auto;
 }
 
 /* Scroll */
@@ -71,16 +51,16 @@ h2 {
 }
   
 ::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: rgb(183, 183, 183);
 }
   
 ::-webkit-scrollbar-thumb {
-    background: var(--red);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    background: var(--green);
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
 }
   
 ::-webkit-scrollbar-thumb:hover {
@@ -91,176 +71,549 @@ h2 {
 /* NAV */
 
 nav {
-    width: 100vw;
-    background-color: var(--green);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-}
-
-.mobile {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100vw;
-}
-
-nav, .mobile {
     height: 70px;
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-
-p, li {
-    font-size: 18px;
-    line-height: 28px;
-}
-
-.full, .top {
-    display: none;
-}
-
-.menu {
-    font-size: 54px;
-    cursor: pointer;
-}
-
-.nav-logo {
-    width: 50vw;
-    height: auto;
-    object-fit: contain;
-}
-
-.mobile-popup {
+    background-color: var(--green);
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
     position: fixed;
     top: 0;
-    width: 100%;
-    background-color: var(--navy-blue);
+    z-index: 2;
+}
+
+/* ul with the expanded links */
+.desktop {
     display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    z-index: 1;
 }
 
-.mobile-popup a {
-    font-size: 24px;
-    color: white;
+/* logo in top left of navbar */
+nav .nav-bpa-logo {
+    width: 30vw;
+    max-height: 60px;
+    background-color: var(--dull-white);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
-.close {
-    position: absolute;
-    right: 0;
-    margin: 4px;
-    font-size: 40px;
-    color: white;
+/* hamburger menu */
+.mobile {
+    font-size: 54px;
+    color: var(--dull-white);
     cursor: pointer;
 }
 
-nav ul {
-    margin-left: 24px;
+/* appears when hamburger is hit */
+.mobile-popup {
+    display: none;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: var(--green);
+    z-index: 3;
 }
 
-nav li {
-    list-style: none;
-    margin: 12px 0;
+.mobile-popup ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
-nav li a {
-    transition: text-decoration 0.4s;
-    -webkit-transition: text-decoration 0.4s;
-    -moz-transition: text-decoration 0.4s;
-    -ms-transition: text-decoration 0.4s;
-    -o-transition: text-decoration 0.4s;
+/* X button to close mobile popup */
+.mobile-popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* individual list items in the list from hamburger menu */
+.mobile-popup li {
+    list-style-type: none;
+    margin: 10px 0;
+}
+
+.mobile-popup li a {
+    text-decoration: none;
+    color: var(--dull-white);
+    font-size: 24px;
+}
+
+.mobile-popup li a:hover {
+    text-decoration: underline;
     color: var(--dull-white);
 }
 
-nav li a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--red);
-    -moz-text-decoration-color: var(--red);
+/* X on the popup */
+.close {
+    font-size: 50px;
+    color: white;
 }
 
 @media only screen and (min-width: 512px) {
-    .nav-logo {
-        width: 40vw;
+    nav {
+        height: 86px;
     }
-    nav, .mobile {
-        height: 80px;
+    nav .nav-bpa-logo {
+        max-height: 68px;
+        width: 28vw;
     }
-    .menu {
-        font-size: 64px;
-        margin-right: 10px
-    }
-    .close {
-        font-size: 50px;
-        margin: 6px;
+    .mobile {
+        font-size: 68px;
     }
 }
 
+/* spread out links for nav */
+nav ul.desktop {
+    justify-content: center;
+    align-items: flex-end;
+    list-style-type: none;
+}
+
+nav ul.desktop li {
+    margin: 0 10px;
+}
+
+nav ul.desktop li a {
+    text-decoration: none;
+    color: var(--dull-white);
+    font-size: 20px;
+}
+
+nav ul.desktop li a:hover {
+    text-decoration: underline;
+}
+
 @media only screen and (min-width: 768px) {
+    nav {
+        height: 90px;
+    }
+    nav .nav-bpa-logo {
+        max-height: 74px;
+        width: 26vw;
+    }
     .mobile {
         display: none;
     }
-    .full {
-        display: block;
-        width: 100vw;
-    }
-    nav, .bottom {
-        height: 90px;
-    }
-    nav .bottom {
+    nav ul.desktop {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav .bottom ul {
-        display: flex;
-        margin-right: 20px;
-    }
-    nav .bottom li {
-        margin: 0 8px;
-        font-size: 21.7px;
-    }
-    .nav-logo {
-        width: 32vw;
     }
 }
 
 @media only screen and (min-width: 992px) {
     nav {
-        height: 120px;
+        height: 100px;
     }
-    .bottom {
-        height: 60px;
+    nav .nav-bpa-logo {
+        max-height: 78px;
+        width: 22vw;
     }
-    .nav-logo {
-        width: 20vw;
-        margin-top: 16px;
-    }
-    nav .bottom li {
+    nav ul.desktop li a {
         font-size: 24px;
-        margin: 0 18px;
-    }  
+    }
 }
 
 @media only screen and (min-width: 1200px) {
-    .nav-logo {
-        width: 15vw;
+    nav {
+        height: 110px;
+    }
+    nav .nav-bpa-logo {
+        max-height: 86px;
+        width: 18vw;
+    }
+    nav ul.desktop {
+        margin-right: 30px;
+    }
+    nav ul.desktop li a {
+        font-size: 28px;
+    }
+}
+
+
+/* Carousel */
+.carousel {
+    background-color: var(--light-black);
+    margin: 70px auto 0 auto;
+    height: fit-content;
+    padding-bottom: 10px;
+    max-width: 1000px;
+}
+
+.carousel * {
+    max-width: 1000px;
+}
+
+/* div with all the imgs for the carousel */
+.carousel-img-container {
+    position: relative;
+}
+
+.carousel-img-container img.carousel-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    transition: opacity 0.4s;
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -ms-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    border-radius: 0 0 14px 14px;
+    -webkit-border-radius: 0 0 14px 14px;
+    -moz-border-radius: 0 0 14px 14px;
+    -ms-border-radius: 0 0 14px 14px;
+    -o-border-radius: 0 0 14px 14px;
+}
+
+.carousel-img-container .dummy-carousel-img {
+    width: 100vw;
+    opacity: 0;
+}
+
+.carousel-container {
+    position: relative;
+    height: fit-content;
+}
+
+.carousel-container i.carousel-left {
+    position: absolute;
+    left: 10px;
+}
+
+.carousel-container i.carousel-right {
+    position: absolute;
+    right: 10px;
+}
+
+.carousel-container i {
+    color: white;
+    font-size: 50px;
+    z-index: 1;
+    bottom: 16px;
+    cursor: pointer;
+}
+
+.carousel-information {
+    text-align: center;
+    width: 80vw;
+    margin: 8px auto 0px auto;
+}
+
+.carousel-information h1 {
+    font-size: 36px;
+    color: var(--dull-white)
+}
+
+.carousel-information p {
+    margin-top: 8px;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--dull-white);
+    text-align: left;
+}
+
+.cta {
+    margin: 20px auto;
+    padding: 1em 2em;
+    font-size: 17px;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    display: flex;
+    background-color: var(--dull-white);
+    background: linear-gradient(to left, var(--dull-white) 50%, var(--green) 50%) right;
+    background-size: 200%;
+    transition: 0.4s ease-out;
+    -webkit-transition: 0.4s ease-out;
+    -moz-transition: 0.4s ease-out;
+    -ms-transition: 0.4s ease-out;
+    -o-transition: 0.4s ease-out;
+}
+
+.cta i {
+    position: relative;
+    top: 4px;
+    left: 10px;
+}
+
+.cta:hover {
+    background-position: left;
+    cursor: pointer;
+    color: var(--dull-white);
+}
+
+@media only screen and (min-width: 512px) {
+    .carousel {
+        margin-top: 86px
+    }
+    .carousel-information h1 {
+        font-size: 37px;
+    }
+    .carousel-information p {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .carousel {
+        margin-top: 90px
+    }
+    .carousel-information h1 {
+        font-size: 38px;
+    }
+    .carousel-information p {
+        font-size: 22px;
+        line-height: 29px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .carousel {
+        margin-top: 100px
+    }
+    .carousel-information h1 {
+        font-size: 40px;
+    }
+    .carousel-information p {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .carousel {
+        margin-top: 110px
+    }
+    .carousel-information h1 {
+        font-size: 42px;
+    }
+    .carousel-information p {
+        font-size: 25px;
+        line-height: 32px;
+    }
+}
+
+/* What is BPA */
+
+.what {
+    background-color: var(--dull-white);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.what-content {
+    max-width: 90vw;
+    margin: auto;
+}
+
+.what h2 {
+    font-size: 30px;
+}
+
+.what p {
+    font-size: 18px;
+    line-height: 32px;
+    text-align: left;
+    margin-top: 12px;
+}
+
+.what img {
+    width: 60vw;
+    margin: auto;
+}
+
+.desktop-what-h2 {
+    display: none;
+}
+
+@media only screen and (min-width: 512px) {
+    .what h2 {
+        font-size: 32px;
+    }
+    .what p {
+        font-size: 20px;
+        line-height: 34px;
+    }
+    .what-content {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .what h2 {
+        font-size: 36px;
+    }
+    .what p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .what-content {
+        max-width: 68%;
+    }
+    .what img {
+        width: 40vw;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .what h2 {
+        font-size: 40px;
+    }
+    .what p {
+        font-size: 22px;
+        line-height: 35px;
+    }
+    .mobile-what-h2 {
+        display: none;
+    }
+    .desktop-what-h2 {
+        display: block;
+    }
+    .what-container {
+        display: flex;
+        padding: 0 20px;
+    }
+    .what-content {
+        order: -1;
+        margin-top: 20px;
+    }
+    .what img {
+        max-width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .what h2 {
+        font-size: 42px;
+    }
+    .what p {
+        font-size: 23px;
+        line-height: 39px;
+    }
+    .what-container {
+        max-width: 1000px;
+        margin: auto;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+    }
+}
+
+.important-dates {
+    background-color: var(--green);
+    text-align: center;
+}
+
+.important-dates h2 {
+    color: var(--dull-white);
+    font-size: 30px;
+    padding: 12px 0;
+}
+
+.important-dates-desktop {
+    display: none;
+}
+
+.important-dates img {
+    max-width: 80vw;
+}
+
+.announcement {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 14px;
+    background-color: var(--maroon);
+    max-width: 200px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.day {
+    font-size: 30px;
+    color: var(--dull-white);
+    line-height: 24px;
+}
+
+.month {
+    font-size: 24px;
+    color: var(--dull-white);
+    line-height: 22px;
+}
+
+.announcement h3 {
+    padding-left: 6px;
+    color: var(--dull-white);
+}
+
+@media only screen and (min-width: 512px) {
+    .important-dates img {
+        max-width: 60vw;
+    }
+    .announcement {
+        justify-content: space-between;
+        max-width: 80vw;
+    }
+    .announcement-container {
+        width: fit-content;
+        margin: auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .important-dates img {
+        max-width: 30vw;
+    }
+    .announcement h3 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .important-dates-mobile {
+        display: none;
+    }
+    .important-dates-desktop {
+        display: block;
+    }
+    .important-dates-container {
+        display: flex;
+        justify-content: center;
+    }
+    .announcement-container {
+        margin: 0;
+    }
+    .important-dates h2 {
+        font-size: 42px;
     }
 }
 
 
 
 
-/* Carousel */
 
-.carousel {
+
+/* .carousel {
     text-align: center;
     margin: 160px 0 40px 0;
     z-index: -1;
@@ -380,11 +733,11 @@ nav li a:hover {
     .dummy-carousel-img, .carousel-img {
         width: 54vw;
     }
-}
+} */
 
 /* What is BPA */
 
-.what {
+/* .what {
     text-align: center;
 }
 
@@ -397,12 +750,12 @@ nav li a:hover {
     font-size: var(--p-size);
     line-height: var(--p-height);
     margin: 20px auto;
-}
+} */
 
 
 /* Announcements  */
 
-.announcements {
+/* .announcements {
     margin: 0 12px 60px 12px;
 }
 
@@ -445,7 +798,7 @@ nav li a:hover {
         margin: 16px 0;
         font-size: 24px;
     }
-}
+} */
 
 
 /* Advisors  */
@@ -453,7 +806,7 @@ nav li a:hover {
 
 /* links */
 
-.link-container {
+/* .link-container {
     text-align: center;
     margin-bottom: 60px;
 }
@@ -478,12 +831,12 @@ nav li a:hover {
 
 @media only screen and (min-width: 512px) {
 
-}
+} */
 
 
 /* footer */
 
-footer {
+/* footer {
     height: 40vh;
     background-color: var(--green);
     display: flex;
@@ -517,4 +870,4 @@ footer a:hover {
 footer .logo img {
     width: 100px;
     cursor: pointer;
-}
+} */

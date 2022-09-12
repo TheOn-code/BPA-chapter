@@ -10,15 +10,23 @@ function ce(val) {
 
 let close_mobile_nav = dq(".close");
 let mobile_nav = dq(".mobile-popup")
-let menu = dq(".menu")
+let menu = dq(".mobile")
 
 close_mobile_nav.addEventListener("click", ()=> {
     mobile_nav.style.display = "none"
 })
 
 menu.addEventListener("click", () => {
-    mobile_nav.style.display = "flex"
+    mobile_nav.style.display = "block"
 })
+
+cta = dq(".cta")
+hr = dq("hr")
+cta.addEventListener("click", () => {
+    cta.scrollIntoView()
+    // window.scrollBy(0,-70)
+})
+
 
 let carousel_left = dq(".carousel-left")
 let carousel_right = dq(".carousel-right")

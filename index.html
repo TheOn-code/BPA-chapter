@@ -5,58 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>West BPA</title>
+    <!-- CSS only -->
     <script defer type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
 </head>
 <body>
+    <div class="mobile-popup">
+        <span class="material-icons close">close</span>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="html/exec-board.html">Leadership</a>
+            </li>
+            <li>
+              <a href="html/photos.html">Photos</a>
+            </li>
+            <li>
+              <a href="html/events.html">Events</a>
+            </li>
+            <li>
+                <a href="html/contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
     <nav>
-        <div class="mobile">
-            <a href="#"><img class="nav-logo mobile-nav" src="images/large-logo.png" alt="Logo"></a>
-            <i class="material-icons menu mobile-nav">menu</i>
-            <div class="mobile-popup">
-                <span class="material-icons close">close</span>
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                      <a href="html/exec-board.html">Exec Board</a>
-                    </li>
-                    <li>
-                      <a href="html/photos.html">Photos</a>
-                    </li>
-                    <li>
-                      <a href="html/events.html">Events</a>
-                    </li>
-                    <li>
-                        <a href="html/contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="nav-left">
+            <a href="#"><img class="nav-bpa-logo" src="images/large-logo.png" alt="Logo"></a>
         </div>
-        <div class="full">
-            <div class="bottom">
-                <a href="#"><img class="nav-logo" src="images/large-logo.png" alt="Logo"></a>
-                <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                      <a href="html/exec-board.html">Exec Board</a>
-                    </li>
-                    <li>
-                      <a href="html/photos.html">Photos</a>
-                    </li>
-                    <li>
-                      <a href="html/events.html">Events</a>
-                    </li>
-                    <li>
-                        <a href="html/contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
+        <div class="nav-right">
+            <i class="material-icons mobile">menu</i>
+            <ul class="desktop">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                  <a href="html/exec-board.html">Leadership</a>
+                </li>
+                <li>
+                  <a href="html/photos.html">Photos</a>
+                </li>
+                <li>
+                  <a href="html/events.html">Events</a>
+                </li>
+                <li>
+                    <a href="html/contact.html">Contact</a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="carousel">
@@ -69,25 +68,62 @@
         </div>
         <div class="carousel-information">
             <h1>West High BPA</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam illum eveniet distinctio voluptate. Ab saepe in fuga ipsam porro illum inventore amet, omnis similique laudantium molestias voluptas deserunt quam commodi.
-                Eaque eligendi exercitationem alias fugiat, corporis mollitia quasi magni labore magnam, nemo eveniet est numquam modi velit expedita placeat voluptas reprehenderit beatae sapiente quae quidem!</p>
+            <p>&emsp;Welcome to the BPA chapter website for West High! Here you can find all kinds of information related to the club.</p>
+            <button class="cta"><h2>Learn More</h2><i class="material-icons">arrow_forward_ios</i></button>
         </div>
     </div>
+    <hr>
     <div class="what">
-        <h2>What is BPA?</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident ad numquam enim eveniet ducimus odit accusamus dolores aspernatur a libero, magnam cum culpa, vitae cupiditate animi! Dignissimos iusto recusandae suscipit.
-        Beatae quaerat commodi, deleniti reprehenderit a temporibus expedita placeat excepturi blanditiis hic quidem architecto aliquam explicabo voluptatum mollitia quia itaque distinctio. Consectetur nostrum</p>
+        <div class="what-container">
+            <h2 class="mobile-what-h2">What is BPA?</h2>
+            <img src="images/svg/question.svg" alt="Question">
+            <div class="what-content">
+                <h2 class="desktop-what-h2">What is BPA?</h2>
+                <p>&emsp;The BPA year kicks off with the Fall leadership conference (FLC) in November. Here you will network with other chapters and learn business related skills all while having a great time. After FLC you will decide what events you will work on. There are a huge variety of individual and team events ranging from Healthcare to business to programming. In February you go to the State Leadership Conference (SLC) to compete in your events. If you place high enough at state, you are given the opportunity to compete at nationals for a week. This years nationals is in Anaheim California.</p>
+            </div>
+        </div>
     </div>
-    <div class="announcements">
-        <h2>Announcements</h2>
-        <ul>
-            <li>Meetings every Friday 8am room 123</li>
-            <li>Member ship fees due xxxxxxxx</li>
-            <li>FLC November 13-14</li>
-            <li>SLC February xx-xx</li>
-            <li>NLC Anaheim California April 26-30</li>
-        </ul>
+
+    <div class="important-dates">
+        <h2 class="important-dates-mobile">Important Dates</h2>
+        <div class="important-dates-container">
+            <img src="images/svg/calender.svg" alt="Calender">
+            <div class="announcement-container">
+                <h2 class="important-dates-desktop">Important Dates</h2>
+                <div class="announcement">
+                    <div class="date">
+                        <div class="day">XX</div>
+                        <div class="month">October</div>
+                    </div>
+                    <h3>Membership Fees Due</h3>
+                </div>
+                <div class="announcement">
+                    <div class="date">
+                        <div class="day">13-14</div>
+                        <div class="month">November</div>
+                    </div>
+                    <h3>Fall Leadership Conference</h3>
+                </div>
+                <div class="announcement">
+                    <div class="date">
+                        <div class="day">19-23</div>
+                        <div class="month">February</div>
+                    </div>
+                    <h3>State Leadership Conference</h3>
+                </div>
+                <div class="announcement">
+                    <div class="date">
+                        <div class="day">26-30</div>
+                        <div class="month">&nbsp;&nbsp;&nbsp;April&nbsp;&nbsp;&nbsp;</div>
+                    </div>
+                    <h3>National Leadership Conference</h3>
+                </div>
+            </div>
+        </div>
     </div>
+    
+    
+    
     <!-- <div class="advisors">
         <h2>Meet The Advisors</h2>
         <div class="advisor">
@@ -97,7 +133,7 @@
 
         </div>
     </div> -->
-    <div class="links">
+    <!-- <div class="links">
         <h2>Links</h2>
         <div class="link-container">
             <a target="_blank" href="https://bpa.org/">BPA Main Site</a>
@@ -128,7 +164,7 @@
         <div class="logo">
             <a target="_blank" href="https://bpa.org/"><img src="images/circle-logo.png" alt="Logo"></a>
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>
 <!-- 
