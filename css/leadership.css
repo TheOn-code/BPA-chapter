@@ -7,6 +7,7 @@ header {
 }
 
 header img {
+    max-width: 90vw;
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -89,10 +90,6 @@ p {
     p {
         font-size: 23px;
     }
-}
-
-header img {
-    max-width: 90vw;
 }
 
 header h1 {
