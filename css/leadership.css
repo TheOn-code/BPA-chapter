@@ -1,0 +1,268 @@
+
+
+header {
+    margin-top: 70px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header img {
+    max-width: 90vw;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--dull-white);
+}
+
+h2 {
+    font-size: 30px;
+    color: var(--dull-white)
+}
+
+p {
+    font-size: 18px;
+    color: var(--dull-white);
+    line-height: 26px;
+}
+
+@media only screen and (min-width: 512px) {
+    header {
+        margin-top: 86px;
+    }
+    h1 {
+        font-size: 37px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        margin-top: 90px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header {
+        margin-top: 95px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        margin-top: 100px;
+    }
+    h1 {
+        font-size: 42px;
+    }
+    h2 {
+        font-size: 42px;
+    }
+    p {
+        font-size: 23px;
+    }
+}
+
+header h1 {
+    margin: 84px 0 4px 0;
+}
+
+header p {
+    max-width: 85%;
+    margin: 8px auto;
+    text-align: left;
+}
+
+@media only screen and (min-width: 512px) {
+    header p {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header img {
+        max-width: 60vw;
+    }
+    header p {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header img {
+        max-width: 50vw;
+    }
+    header p {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header img {
+        max-width: 45vw;
+    }
+    header p {
+        max-width: 45%;
+    }
+}
+
+.member {
+    width: 100vw;
+    text-align: center;
+    padding: 32px 0;
+}
+
+.member img {
+    width: 76%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.member p {
+    width: 86%;
+    text-align: left;
+    margin: 8px auto;
+}
+
+@media only screen and (min-width: 512px) {
+    .member img {
+        width: 54%;
+    }
+    .member p {
+        width: 66%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .member img {
+        width: 38%;
+    }
+    .member p {
+        width: 58%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .member-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .member {
+        max-width: 50%;
+    }
+    .member img {
+        width: 60%;
+    }
+    .member p {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .member {
+        max-width: 25%;
+    }
+    .member img {
+        width: 70%;
+    }
+    .member p {
+        width: 90%;
+    }
+}
+
+.white {
+    background-color: var(--dull-white);
+}
+
+.white p, .white h2 {
+    color: var(--light-black);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+@media only screen and (min-width: 992px) {
+    .white {
+        background-color: var(--light-black);
+    }
+    .white p, .white h2 {
+        color: var(--dull-white);
+    }
+    .green {
+        background-color: var(--light-black);
+    }
+    .md-white {
+        background-color: var(--dull-white);
+    }
+    
+    .md-white p, .md-white h2 {
+        color: var(--light-black);
+    }
+    
+    .md-green {
+        background-color: var(--green);
+    }
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+    .md-white {
+        background-color: var(--light-black);
+    }
+    .md-white p, .md-white p {
+        color: var(--dull-white);
+    } 
+    .md-green {
+        background-color: var(--light-black);
+    }
+    .lg-white {
+        background-color: var(--dull-white);
+    }
+    
+    .lg-white p, .lg-white h2 {
+        color: var(--light-black);
+    }
+    .lg-green {
+        background-color: var(--green);
+    }
+    .lg-green p, .lg-green h2 {
+        color: var(--dull-white);
+    }
+}
+
+
