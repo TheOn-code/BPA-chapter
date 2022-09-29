@@ -207,7 +207,7 @@ nav ul.desktop li a:hover {
 
 @media only screen and (min-width: 1200px) {
     nav {
-        height: 100px;
+        height: 90px;
     }
     nav .nav-bpa-logo {
         max-height: 86px;
