@@ -1,3 +1,8 @@
+
+.event-body {
+    display: none;
+}
+
 header {
     margin-top: 70px;
     text-align: center;
@@ -178,6 +183,7 @@ header p {
     margin: 20px auto;
     padding: 0.8em 1.6em;
     font-size: 18px;
+    color: var(--light-black);
     border-radius: 100px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;

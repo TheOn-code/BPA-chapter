@@ -14,8 +14,10 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/events.css">
     <script src="../js/script.js" defer></script>
+    <script src="../js/events.js" defer></script>
 </head>
 <body>
+    <button style="display:none"></button>
     <div class="mobile-popup" id="mobilePopup">
         <span class="material-icons close">close</span>
         <ul>
@@ -72,7 +74,7 @@
         <h2>Presentation Management</h2>
         <img src="../images/Events/presentationManagement.svg" alt="Photo">
         <p>&emsp;Presentation management asks you to research a given topic then create a presentation to go along with it and present it to a judge.</p>
-        <button class="cta">See example</button>
+        <button class="cta" id="presentationManagement">See example</button>
         </div>
       </div>
       <div class="event">
@@ -80,7 +82,7 @@
           <h2>Entrepreneurship</h2>
           <img src="../images/Events/entrepreneurship.svg" alt="Photo">
           <p>&emsp;In entreprenuership you get to design the business of your dreams. You will develop and write up a business plan and a presentation to go with it.</p>
-          <button class="cta">See examples</button>
+          <button class="cta" id="entrepreneurship">See examples</button>
         </div>
       </div>
       <div class="event">
@@ -88,7 +90,7 @@
           <h2>Website Design Team</h2>
           <img src="../images/Events/website.svg" alt="Photo">
           <p>&emsp;Website design team asks you to create a website on a given topic. You will then present your website along with an explanatory presentation to a judge.</p>
-          <button class="cta">See example</button>
+          <button class="cta" id="webDesignTeam">See example</button>
         </div>
       </div>
     </div>
@@ -133,5 +135,10 @@
             </div>
         </div>
     </footer>
+    <div class="event-body presentation-management">PRESENTATION</div>
+    <div class="event-body entreprenuership">ENTREPRENEURSHIP
+      <div style="width:100px;height:100px;background-color: blue;"></div>
+    </div>
+    <div class="event-body web-design-team">WEBSITE</div>
 </body>
 </html>

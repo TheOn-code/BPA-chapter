@@ -4,6 +4,10 @@ function dq(val) {
     return document.querySelector(val)
 }
 
+function dqa(val) {
+    return document.querySelectorAll(val)
+}
+
 function ce(val) {
     return document.createElement(val)
 }
