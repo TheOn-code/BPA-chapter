@@ -414,3 +414,41 @@ hr {
 .leadership .cta h2 {
     color: var(--light-black);
 }
+
+.photo {
+    background-color: var(--dull-white);
+}
+
+.photo h2 {
+    font-size: 26px;
+}
+
+.photo a {
+    text-decoration: none;
+}
+
+.photo-container img {
+    order: -1;
+}
+
+.event {
+    background-color: var(--green);
+}
+
+.event h2 {
+    font-size: 26px;
+    color: var(--dull-white)
+}
+
+.event p {
+    color: var(--dull-white);
+}
+
+.event a {
+    text-decoration: none;
+    color: var(--light-black);
+}
+
+.event button h2 {
+    color: var(--light-black);
+}

@@ -267,10 +267,23 @@ header p {
     color: var(--green)
 }
 
+.event-example img {
+    width: 90%;
+    margin: 8px auto;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
 @media only screen and (min-width: 512px) {
     .event-example iframe, .event-example object, .event-example video {
         width: 86%;
         height: 440px;
+    }
+    .event-example img {
+        width: 80%;
     }
 }
 
@@ -279,6 +292,9 @@ header p {
         width: 80%;
         height: 520px;
     }
+    .event-example img {
+        width: 70%;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -286,10 +302,17 @@ header p {
         width: 76%;
         height: 600px;
     }
+    .event-example img {
+        width: 56%;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     .event-example iframe, .event-example object, .event-example video {
         height: 700px;
+    }
+    .event-example img {
+        display: inline-block;
+        width: 44%;
     }
 }
