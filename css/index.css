@@ -132,6 +132,10 @@ hr {
     color: var(--dull-white);
 }
 
+.cta h2:hover {
+    color: var(--dull-white) !important;
+}
+
 @media only screen and (min-width: 512px) {
     .carousel {
         margin-top: 86px
