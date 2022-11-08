@@ -1,0 +1,152 @@
+header {
+    margin-top: 70px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header iframe {
+    width: 40%;
+    height: 60vw;
+    border: #000;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--dull-white);
+}
+
+h2 {
+    font-size: 30px;
+    color: var(--dull-white)
+}
+
+h3 {
+    font-size: 26px;
+    color: var(--dull-white);
+}
+
+p {
+    font-size: 18px;
+    color: var(--dull-white);
+    line-height: 26px;
+}
+
+.wsap-level a {
+    text-decoration: none;
+}
+
+.wsap-level a:hover h3{
+    color: rgb(194, 194, 194);
+}
+
+@media only screen and (min-width: 512px) {
+    header {
+        margin-top: 86px;
+    }
+    h1 {
+        font-size: 37px;
+    }
+    h2 {
+        font-size: 32px;
+    }
+    p {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        margin-top: 90px;
+    }
+    h1 {
+        font-size: 38px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header {
+        margin-top: 95px;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    p {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        margin-top: 100px;
+    }
+    h1 {
+        font-size: 42px;
+    }
+    h2 {
+        font-size: 42px;
+    }
+    p {
+        font-size: 23px;
+    }
+}
+
+header h1 {
+    margin: 84px 0 4px 0;
+}
+
+header p {
+    max-width: 85%;
+    margin: 8px auto;
+    text-align: left;
+}
+
+@media only screen and (min-width: 512px) {
+    header p {
+        max-width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    header iframe {
+        max-width: 60vw;
+    }
+    header p {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header iframe {
+        max-width: 30vw;
+        max-height: 50vw;
+    }
+    header p {
+        max-width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header iframe {
+        max-width: 20vw;
+        max-height: 30vw;
+    }
+    header p {
+        max-width: 45%;
+    }
+}
+
