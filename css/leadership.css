@@ -154,6 +154,7 @@ header p {
     width: 86%;
     text-align: left;
     margin: 8px auto;
+	font-size: 16px;
 }
 
 @media only screen and (min-width: 512px) {
@@ -162,6 +163,7 @@ header p {
     }
     .member p {
         width: 66%;
+		font-size: 16px;
     }
 }
 
@@ -171,6 +173,7 @@ header p {
     }
     .member p {
         width: 58%;
+		font-size: 16px;
     }
 }
 
@@ -188,18 +191,20 @@ header p {
     }
     .member p {
         width: 80%;
+		font-size: 18px;
     }
 }
 
 @media only screen and (min-width: 1200px) {
     .member {
-        max-width: 25%;
+        max-width: 33.33%;
     }
     .member img {
         width: 70%;
     }
     .member p {
         width: 90%;
+		font-size: 20px;
     }
 }
 
