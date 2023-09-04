@@ -8,8 +8,7 @@ hr {
     -moz-border-radius: 1000px;
     -ms-border-radius: 1000px;
     -o-border-radius: 1000px;
-    background-color: var(--green);
-    border: var(--green);
+    border: none;
     margin: 20px auto;
 }
 
